@@ -5,15 +5,16 @@ import java.util.Random;
 
 public class Personaj {
 
-    String nume = "YO";
-    String rasa = "YO"; // elf, human. wizard, orc, dwarf
-    String clas = "YO"; // warrior, druid, necromancer, paladin, Sorceress, assassin
-    Boolean sex = true;
-    int hp = 0;
-    short level = 0;
-    int power = 0;
-    byte nrWeapons = 0;
+    String nume;
+    String rasa; // elf, human. wizard, orc, dwarf
+    String clas; // warrior, druid, necromancer, paladin, Sorceress, assassin
+    Boolean sex ;
+    int hp ;
+    short level ;
+    int power ;
+    byte nrWeapons ;
     int[] weaponsDestructivePower = new int[nrWeapons];
+
 
     public void randomize() {
         nume = "Yolo";
@@ -23,8 +24,8 @@ public class Personaj {
         power = (new Random().nextInt());
         nrWeapons = (byte) (new Random().nextInt(10));
         weaponsDestructivePower = new int[nrWeapons];
-        /*for (int i = 0; i < nrWeapons; i++)
-            weaponsDestructivePower[i] = (new Random().nextInt(1000));*/
+        for (int i = 0; i < nrWeapons; i++)
+            weaponsDestructivePower[i] = (new Random().nextInt(1000));
         String[] rasaArray = {"Elf", "Human", "Wizard", "Orc", "Dwarf"};
         rasa = rasaArray[new Random().nextInt(rasaArray.length)];
         String[] clasArray = {"Warrior", "Druid", " Necromancer", " Paladin", " Sorceress", "Assassin"};
